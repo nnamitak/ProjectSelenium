@@ -82,26 +82,27 @@ public class SpaceNowMasterPage extends BasePage{
 
 	public void userNameDetails() throws IOException{
 		waitForLoad(driver);  
-			FileInputStream fis = new FileInputStream(new File("./data/SpaceNow.xlsx"));
-			Reporter.log("File Opened .... ",true);
-			XSSFWorkbook workbook = new XSSFWorkbook(fis);
-			Reporter.log("File Opened  1 .... ",true);
-			XSSFSheet sheet = workbook.getSheetAt(0);
-			
-			String h1 = sheet.getRow(0).getCell(0).getStringCellValue();
-			
-			Reporter.log("File Opened 2.... ",true);
+		FileInputStream fis = new FileInputStream(new File("./data/SpaceNow.xlsx"));
+		Reporter.log("File Opened .... ",true);
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		Reporter.log("File Opened  1 .... ",true);
+		XSSFSheet sheet = workbook.getSheetAt(0);
 
-			String uName1 = sheet.getRow(1).getCell(0).getStringCellValue();
-			String pass1 = sheet.getRow(1).getCell(1).getStringCellValue();
-			Reporter.log("File Opened 3.... ",true);
-			waitForLoad(driver);
-			userEmail.sendKeys(uName1);
-			
-			waitForLoad(driver);
-			userPass.sendKeys(pass1);
+		String h1 = sheet.getRow(0).getCell(0).getStringCellValue();
+
+		Reporter.log("File Opened 2.... ",true);
+
+		String uName1 = sheet.getRow(1).getCell(0).getStringCellValue();
+		String pass1 = sheet.getRow(1).getCell(1).getStringCellValue();
+		Reporter.log("File Opened 3.... ",true);
+		waitForLoad(driver);
+		userEmail.sendKeys(uName1);
+
+		waitForLoad(driver);
+		userPass.sendKeys(pass1);
 
 		waitForLoad(driver);
 		find(loginButton).click();
+		Reporter.log("Closing the browser.... ",true);
 	}
 }

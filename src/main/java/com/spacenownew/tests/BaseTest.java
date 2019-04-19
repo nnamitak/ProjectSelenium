@@ -31,9 +31,9 @@ public class BaseTest implements ITestConstants{
 		driver.manage().window().maximize();
 	}
 
-	//Test teardown 
+	//Closing the Browser
 	@AfterMethod
 	public void closeBrowser(){
-		//driver.quit();
+		driver.quit();
 	}
 }

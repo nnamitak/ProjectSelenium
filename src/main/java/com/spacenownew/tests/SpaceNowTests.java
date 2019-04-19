@@ -21,7 +21,7 @@ public class SpaceNowTests extends BaseTest {
 		// Step 1: Navigate to the following URL: https://www.spacenow.com/
 		initialPage.navigateToSpaceNow();
 
-/*		//Step 2: Click LOGIN
+		//Step 2: Click LOGIN
 		initialPage.clickLoginBtn();
 
 		//Step 3: Click Login with Google Account
@@ -32,7 +32,7 @@ public class SpaceNowTests extends BaseTest {
 		initialPage.clickFaceBookBtn();	
 		driver.navigate().back();
 
-	*/	//Step 5: Click LOGIN and Enter Email and Password to Login 
+		//Step 5: Click LOGIN and Enter Email and Password to Login 
 		initialPage.clickLoginBtn();
 		initialPage.userNameDetails();
 
